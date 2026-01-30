@@ -1,5 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  justify-content: end;
+  align-content: end;
+}
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #3044a5;
+}
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.container h2 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.container h2::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #ffeb3b;
+}
+.container p {
+  color: #fff;
+}
+.links {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-gap: 10px;
+}
+.links li {
+  list-style: none;
+}
+.links li a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: #3e55cb;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.links li a:hover {
+  background: #6380fe;
+}
+.links li a .fa {
+  color: #fff;
+  font-size: 20px;
+}
+.quicklinks {
+  position: relative;
+}
+.quicklinks li {
+  list-style: none;
+}
+.quicklinks li a {
+  color: #f7f7f7;
+  text-decoration: none;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+.quicklinks li a:hover {
+  color: #ffeb3b;
+}
+.info {
+  position: relative;
+}
+.info li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+}
+.info li span:nth-child(1) {
+  color: #fff;
+  font-size: 20px;
+}
+.info li span {
+  color: #fff;
+}
+.info a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+.info a:hover {
+  color: #ffeb3b;
+}
+.copyright-notice {
+  width: 100%;
+  background: #1f3389;
+  padding: 8px 100px;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  footer {
+    padding: 48px;
+  }
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .copyright-notice {
+    padding: 8px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
